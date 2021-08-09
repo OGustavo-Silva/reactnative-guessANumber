@@ -1,3 +1,4 @@
+//Initial page when the App is executed
 import React, { useState } from 'react';
 import {
     View,
@@ -14,6 +15,7 @@ import NumberContainer from '../components/NumberContainer';
 import Colors from '../constants/Colors';
 import BodyText from '../components/BodyText';
 import Input from '../components/Input';
+import MainButton from '../components/MainButton';
 import TitleText from '../components/TitleText';
 
 const StartGameScreen = props => {
@@ -55,7 +57,7 @@ const StartGameScreen = props => {
         confirmedOutput = <Card style={styles.summaryContainer}>
             <BodyText>You selected</BodyText>
             <NumberContainer>{selectedNumber}</NumberContainer>
-            <Button title="START GAME" onPress={() => props.onStartGame(selectedNumber)} />
+            <MainButton onPress={() => props.onStartGame(selectedNumber)} >START GAME</MainButton>
         </Card>
     };
 
